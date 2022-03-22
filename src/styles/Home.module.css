@@ -1,0 +1,91 @@
+.homeBody {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+}
+
+.info h1 {
+  font-family: "Bad Script", cursive;
+  font-size: 3rem;
+  color: #bb3e03;
+}
+
+.info p {
+  margin-bottom: 1rem;
+  color: #ca6702;
+}
+
+.info button {
+  font-family: "Comfortaa", cursive;
+  cursor: pointer;
+  width: 15rem;
+  height: 3rem;
+  background-color: white;
+  color: #bb3e03;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 7%;
+  margin-bottom: 1rem;
+}
+.info a:visited {
+  color: #bb3e03;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  height: 25rem;
+}
+
+@media screen and (max-width: 900px) {
+  .logo img {
+    height: 15rem;
+  }
+  .homeBody h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homeBody {
+    flex-direction: column;
+  }
+  .logo img {
+    margin-top: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .homeBody {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .logo img {
+    margin-top: 0.25rem;
+    height: 15rem;
+  }
+  .info {
+    max-width: 90%;
+  }
+  .info button {
+    width: 5rem;
+    font-size: 0.75rem;
+  }
+  .info p {
+    font-size: 0.75rem;
+  }
+}

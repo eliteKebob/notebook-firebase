@@ -1,0 +1,32 @@
+.noteCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e9d8a6;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .content {
+    padding: 2px 3px;
+    font-size: 0.8rem;
+    width: 75%;
+  }
+  .buttonGroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #001219;
+    padding: 0;
+  }
+}

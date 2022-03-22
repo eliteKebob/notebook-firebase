@@ -1,0 +1,114 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formButtons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.formButtons button {
+  height: 2rem;
+  padding: 0 1rem;
+}
+
+.formButtons .activeButton {
+  background-color: #001219;
+  color: #e9d8a6;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.formInput input {
+  width: 20rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  background-color: #9b2226;
+  font-size: 1rem;
+  color: white;
+}
+
+.formInput textarea {
+  width: 50rem;
+  height: 20rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  text-decoration: solid underline;
+  font-size: 2rem;
+  color: #001219;
+  background-color: #e9d8a6;
+  border: none;
+  border-radius: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formInput textarea::placeholder {
+  color: #001219;
+}
+
+.formInput button {
+  width: 20rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  background-color: #9b2226;
+  font-size: 1rem;
+  color: white;
+}
+.private {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #9b2226;
+}
+
+.private p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.dangerIcon {
+  font-size: 10rem;
+}
+
+.shareIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  border: 1px solid #e9d8a6;
+  border-radius: 5%;
+  padding: 5px;
+  color: white;
+  background-color: #9b2226;
+}
+
+@media screen and (max-width: 500px) {
+  .formInput textarea {
+    width: 20rem;
+    font-size: 1.5rem;
+  }
+  .formInput button {
+    width: 15rem;
+  }
+  .formInput input {
+    width: 15rem;
+  }
+}

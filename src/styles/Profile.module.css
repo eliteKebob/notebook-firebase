@@ -1,0 +1,125 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner {
+  width: 100%;
+  height: 12rem;
+  background-color: #e9d8a6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+.banner img {
+  width: 10rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5%;
+}
+
+.banner .nameBio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nameBio h2 {
+  margin-bottom: 0.5rem;
+}
+
+.nameBio h5 {
+  font-style: italic;
+}
+
+.userCards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.userCards h6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-radius: 10%;
+  background-color: #001219;
+  color: #e9d8a6;
+  padding: 0.25rem 0.5rem;
+}
+
+.notes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.notes a {
+  font-size: 2rem;
+}
+
+.control {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 75%;
+}
+
+.control a {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #001219;
+}
+
+@media screen and (max-width: 500px) {
+  .banner {
+    flex-direction: column;
+    height: 15rem;
+  }
+
+  .banner img {
+    width: 7rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+  }
+  .nameBio h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .notes {
+    margin-top: 0.25rem;
+  }
+  .control {
+    position: relative;
+    left: 0%;
+    flex-direction: row;
+  }
+  .control a {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-right: 0.25rem;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 1px 2px;
+    border-radius: 7%;
+    color: #e9d8a6;
+    background-color: #001219;
+  }
+}

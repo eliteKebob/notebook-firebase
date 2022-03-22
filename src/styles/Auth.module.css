@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.container .logo {
+  margin-bottom: 0.5rem;
+  height: 10rem;
+  box-shadow: rgba(0, 0, 0, 0.11);
+}
+
+.container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.11);
+}
+
+.container form input {
+  width: 15rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  padding: 0.31rem;
+  box-shadow: rgba(0, 0, 0, 0.11);
+}
+
+.container form button {
+  background-color: #001219;
+  color: #e9d8a6;
+  padding: 0.31rem;
+  border-radius: 5%;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.11);
+}
+
+.container form .showPassword {
+  margin-top: 0.1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.11);
+}
+
+.container form a {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.socialInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.socialButton {
+  font-size: 3rem;
+  cursor: pointer;
+}
