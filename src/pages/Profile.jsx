@@ -93,12 +93,16 @@ const Profile = () => {
             </h6>
           </div>
         </div>
-        <div className={styles.control}>
-          <Link to={`/profile-edit/${auth.currentUser.uid}`}>
-            Profilini düzenle {<BsPersonSquare />}
-          </Link>
-          <Link to={`/create-note`}>Not yaz {<BsPencilSquare />}</Link>
-        </div>
+        {auth.currentUser && auth.currentUser.uid === params.id ? (
+          <div className={styles.control}>
+            <Link to={`/profile-edit/${auth.currentUser.uid}`}>
+              Profilini düzenle {<BsPersonSquare />}
+            </Link>
+            <Link to={`/create-note`}>Not yaz {<BsPencilSquare />}</Link>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
       <div className={styles.notes}>
         {userNotes.map((note, idx) => (

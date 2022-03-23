@@ -6,6 +6,28 @@
   justify-content: center;
 }
 
+.writer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.writer img {
+  width: 10rem;
+  border: 5px solid rgba(0, 0, 0, 0.15);
+  border-radius: 5%;
+  margin-right: 0.25rem;
+}
+
+.writerInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .formButtons {
   display: flex;
   justify-content: space-evenly;
@@ -101,6 +123,9 @@
 }
 
 @media screen and (max-width: 500px) {
+  .writer img {
+    width: 7rem;
+  }
   .formInput textarea {
     width: 20rem;
     font-size: 1.5rem;

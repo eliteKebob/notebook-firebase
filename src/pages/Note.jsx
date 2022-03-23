@@ -7,14 +7,20 @@ import styles from "../styles/NoteForm.module.css";
 import { MdDangerous } from "react-icons/md";
 import { BsShareFill } from "react-icons/bs";
 import { toast } from "react-toastify";
+import avatar from "../assets/avatar.png";
 
 const Note = () => {
+  const [noteWriter, setNoteWriter] = useState({});
   const [formData, setFormData] = useState({
     title: "",
     type: "public",
     text: "",
+    userRef: "",
+    timestamp: [],
   });
-  const { title, type, text } = formData;
+  const { title, type, text, userRef, timestamp } = formData;
+  const seconds = timestamp.seconds * 1000;
+  let noteDate = new Date(seconds).toLocaleString();
 
   const navigate = useNavigate();
   const params = useParams();
@@ -38,6 +44,18 @@ const Note = () => {
     fetchNote();
   }, [navigate, params.id]);
 
+  useEffect(() => {
+    const fetchNoteWriter = async () => {
+      const writerRef = doc(db, "usersInfo", userRef);
+      const writerSnap = await getDoc(writerRef);
+
+      if (writerSnap.exists()) {
+        setNoteWriter({ ...writerSnap.data() });
+      }
+    };
+    fetchNoteWriter();
+  }, [userRef]);
+
   return (
     <div className={styles.container}>
       {!auth.currentUser && type === "private" ? (
@@ -48,6 +66,18 @@ const Note = () => {
       ) : (
         <form>
           <div className={styles.formInput}>
+            <div className={styles.writer}>
+              <img
+                src={noteWriter.imgUrls ? noteWriter.imgUrls[0] : avatar}
+                alt=""
+              />
+              <div className={styles.writerInfo}>
+                <h2>
+                  {noteWriter.name} {noteWriter.lastName}
+                </h2>
+                <h6>{noteDate}</h6>
+              </div>
+            </div>
             <input type="text" name="title" value={title} disabled />
             <textarea type="text" name="text" value={text}></textarea>
             <div className={styles.shareIcon} onClick={handleClick}>
