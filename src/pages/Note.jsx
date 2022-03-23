@@ -2,10 +2,10 @@ import { getAuth } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import styles from "../styles/NoteForm.module.css";
 import { MdDangerous } from "react-icons/md";
-import { BsShareFill } from "react-icons/bs";
+import { BsShareFill, BsLink45Deg } from "react-icons/bs";
 import { toast } from "react-toastify";
 import avatar from "../assets/avatar.png";
 
@@ -72,9 +72,11 @@ const Note = () => {
                 alt=""
               />
               <div className={styles.writerInfo}>
-                <h2>
-                  {noteWriter.name} {noteWriter.lastName}
-                </h2>
+                <Link to={`/profile/${userRef}`}>
+                  <h2>
+                    {noteWriter.name} {noteWriter.lastName} {<BsLink45Deg />}
+                  </h2>
+                </Link>
                 <h6>{noteDate}</h6>
               </div>
             </div>

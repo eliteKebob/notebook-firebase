@@ -28,6 +28,17 @@
   justify-content: center;
 }
 
+.writerInfo a h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.writerInfo a h2:hover {
+  background-color: #001219;
+  color: #e9d8a6;
+}
+
 .formButtons {
   display: flex;
   justify-content: space-evenly;

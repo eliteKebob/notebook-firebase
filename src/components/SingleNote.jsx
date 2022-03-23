@@ -16,6 +16,7 @@ const SingleNote = ({ note, onDelete }) => {
         <h1>{note.data.title}</h1>
         <h3>{note.data.text}</h3>
       </div>
+
       {auth.currentUser && auth.currentUser.uid === params.id ? (
         <div className={styles.buttonGroup}>
           <Link to={`/notes/${note.id}`}>
@@ -29,7 +30,11 @@ const SingleNote = ({ note, onDelete }) => {
           </Link>
         </div>
       ) : (
-        ""
+        <div className={styles.buttonGroup}>
+          <Link to={`/notes/${note.id}`}>
+            <FcViewDetails />
+          </Link>
+        </div>
       )}
     </div>
   );
